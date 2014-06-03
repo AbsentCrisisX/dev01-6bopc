@@ -7,44 +7,39 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
+public class AppTest
+        extends TestCase {
+
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public AppTest( String testName )
-    {
-        super( testName );
+    public AppTest(String testName) {
+        super(testName);
     }
 
     /**
      * @return the suite of tests being tested
      */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    public static Test suite() {
+        return new TestSuite(AppTest.class);
     }
 
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
-    {
+    public void testApp() {
         testHello();
-        testSecondHello();
-        assertTrue( true );
+        testGetWebText();
+        assertTrue(true);
     }
-    
-    public void testHello()
-    {
+
+    public void testHello() {
         assertEquals("Hello world!", App.getHello());
     }
-    
-    public void testSecondHello()
-    {
-        assertEquals("Hello world too!", App.getSecondHello());
+
+    public void testGetWebText() {
+        assertEquals("This is a text from a weburl!", App.getWebText());
     }
 }
